@@ -1,0 +1,35 @@
+<% layout("/layouts/boilerplate") %>
+<div class="mt-3">
+  <div class="row row-cols-lg-3 row-cols-md-3 row-cols-sm-1 mt-3">
+    <% for(let listing of allListings) { %>
+    <div class="listing-col">
+      <div class="card col listing-card">
+        <div class="card-body">
+          <div class="card-text">
+            <div class="card-title">
+              <h4><%= listing.title %></h4>
+              <% if(currUser && currUser._id.equals(listing.owner._id)) { %>
+              <div class="btns mb-3">
+                <a href="/listings/<%= listing.id %>/edit" class="btn offset-3"
+                  ><i class="fa-solid fa-pencil"></i
+                ></a>
+                <form
+                  method="POST"
+                  action="/listings/<%=listing.id%>?_method=DELETE"
+                >
+                  <button class="btn offset-1">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </form>
+              </div>
+            </div>
+            <p><%= listing.description %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% } %> <% } %> <% if(allListings.length === 0) { %>
+    <h1>Found Nothing!</h1>
+    <% } %>
+  </div>
+</div>

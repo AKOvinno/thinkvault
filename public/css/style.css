@@ -1,0 +1,101 @@
+body {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.container {
+  flex: 1;
+}
+.navbar {
+  height: 5rem;
+  background-color: #f3dbb3;
+}
+/* Give the mobile navbar a solid background */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background: #f3dbb3; /* or your preferred color */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 0 0 1rem 1rem;
+  }
+  .navbar-nav .nav-link {
+    color: #222 !important; /* ensure links are visible */
+  }
+}
+
+.nav-link {
+  color: #222222 !important;
+}
+/* Footer Styles */
+.f-info-brand {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.f-info {
+  text-align: center;
+  height: 4rem;
+  background-color: #f3dbb3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: space-evenly;
+}
+/* Footer Styles */
+
+/* Cards Styling */
+.listing-col {
+  margin-top: 2rem !important;
+}
+.listing-card {
+  border: none !important;
+  border: 2px solid #222 !important;
+  padding: 2% !important;
+}
+.card-body {
+  padding: 0 !important;
+}
+.card-text p {
+  font-weight: 400;
+}
+.card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btns {
+  margin-right: 2rem !important;
+}
+.listing-link {
+  text-decoration: none;
+}
+/* Cards Styling */
+/* New page button */
+.add-btn,
+.edit-btn {
+  background-color: navy !important;
+  border: none !important;
+}
+.cancel-btn {
+  background-color: black !important;
+  border: none !important;
+}
+/* New page button */
+
+/* Show Page */
+.show-img {
+  height: 30vh;
+}
+
+.btns {
+  display: flex;
+}
+.show-card {
+  padding-left: 0;
+  padding-right: 0;
+}
+.img-border {
+  border: 2px solid #222 !important;
+  border-radius: 2rem !important;
+}
